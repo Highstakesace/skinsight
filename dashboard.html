@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SkinSight Dashboard</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #1e1e1e;
+    color: #eee;
+    display: flex;
+    min-height: 100vh;
+  }
+  /* Sidebar */
+  aside {
+    width: 250px;
+    background: #2c2c2c;
+    padding: 20px;
+    border-right: 2px solid #e03e3e;
+  }
+  aside h2 {
+    color: #e03e3e;
+    margin-bottom: 15px;
+  }
+  aside label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  aside input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  /* Main content */
+  main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e03e3e;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    color: #e03e3e;
+    font-size: 2rem;
+  }
+  /* Skins grid */
+  .skins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+  }
+  /* Skin card */
+  .skin-card {
+    background: #2c2c2c;
+    border: 2px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+  .skin-card:hover {
+    border-color: #e03e3e;
+  }
+  .skin-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  .skin-info {
+    padding: 10px;
+  }
+  .skin-name {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .skin-float, .skin-price {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  .skin-float {
+    color: #ccc;
+  }
+  .skin-price {
+    color: #e03e3e;
+    font-weight: bold;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    border-top: 1px solid #333;
+    margin-top: auto;
+  }
+</style>
+</head>
+<body>
+
+<aside>
+  <h2>Filtros</h2>
+  <div>
+    <h3>Tipo</h3>
+    <label><input type="checkbox" checked /> Rifle</label>
+    <label><input type="checkbox" checked /> Pistola</label>
+    <label><input type="checkbox" /> Fuzil de precisão</label>
+  </div>
+  <div>
+    <h3>Raridade</h3>
+    <label><input type="checkbox" checked /> Comum</label>
+    <label><input type="checkbox" checked /> Rara</label>
+    <label><input type="checkbox" /> Épica</label>
+  </div>
+  <div>
+    <h3>Float</h3>
+    <label><input type="checkbox" checked /> 0.00 - 0.15</label>
+    <label><input type="checkbox" checked /> 0.15 - 0.30</label>
+    <label><input type="checkbox" /> 0.30 - 1.00</label>
+  </div>
+</aside>
+
+<main>
+  <header><h1>SkinSight - Skins Disponíveis</h1></header>
+  <div class="skins-grid">
+    <div class="skin-card">
+      <img src="https://cdn.discordapp.com/attachments/1104553075602010208/1115050335351363684/Awp.png" alt="AWP Dragon Lore" class="skin-img" />
+      <div class="skin-info">
+        <div class="skin-name">AWP Dragon Lore</div>
+        <div class="skin-float">Float: 0.07</div>
+        <div class="skin-price">$1,500</div>
+      </div>
+    </div>
+    <div class="skin-card">
+      <img src="https://cdn.discordapp.com/attachments/1104553075602010208/1115050371350334751/M4A1-S_Hot_Rod.png" alt="M4A1-S Hot Rod" class="skin-img" />
+      <div class="skin-info">
+        <div class="skin-name">M4A1-S Hot Rod</div>
+        <div class="skin-float">Float: 0.12</div>
+        <div class="skin-price">$750</div>
+      </div>
+    </div>
+    <div class="skin-card">
+      <img src="https://cdn.discordapp.com/attachments/1104553075602010208/1115050382919451236/Glock18_Water_Elemental.png" alt="Glock-18 Water Elemental" class="skin-img" />
+      <div class="skin-info">
+        <div class="skin-name">Glock-18 Water Elemental</div>
+        <div class="skin-float">Float: 0.05</div>
+        <div class="skin-price">$450</div>
+      </div>
+    </div>
+    <div class="skin-card">
+      <img src="https://cdn.discordapp.com/attachments/1104553075602010208/1115050411147612722/Desert_Eagle_Crimson_Web.png" alt="Desert Eagle Crimson Web" class="skin-img" />
+      <div class="skin-info">
+        <div class="skin-name">Desert Eagle Crimson Web</div>
+        <div class="skin-float">Float: 0.14</div>
+        <div class="skin-price">$600</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
